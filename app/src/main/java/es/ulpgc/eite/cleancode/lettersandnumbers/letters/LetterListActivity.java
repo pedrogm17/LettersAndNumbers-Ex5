@@ -8,6 +8,8 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import es.ulpgc.eite.cleancode.lettersandnumbers.R;
 import es.ulpgc.eite.cleancode.lettersandnumbers.app.AppMediator;
 import es.ulpgc.eite.cleancode.lettersandnumbers.data.LetterData;
@@ -18,7 +20,7 @@ public class LetterListActivity
   public static String TAG = LetterListActivity.class.getSimpleName();
 
   private LetterListContract.Presenter presenter;
-  Button letraBtn;
+  FloatingActionButton letraBtn;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {

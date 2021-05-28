@@ -114,11 +114,9 @@ public class LetterListPresenter implements LetterListContract.Presenter {
   @Override
   public void onClickLetterListButton() {
     // Log.e(TAG, "onClickLetterListButton()");
-    ArrayList<String> data = model.getListaLetras();
-    int cuenta = data.size();
-    String letras = model.getLetras();
-    char letra = letras.charAt(cuenta);
-    model.addLetter(String.valueOf(letra));
+    LetterData data = new LetterData();
+    data.letter = "A";
+    state.datasource.add(data);
   }
 
   @Override

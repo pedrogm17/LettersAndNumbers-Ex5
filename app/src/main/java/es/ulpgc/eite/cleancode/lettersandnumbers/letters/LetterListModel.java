@@ -14,7 +14,8 @@ public class LetterListModel implements LetterListContract.Model {
 
   private String data;
   private ArrayList<String> listaLetras;
-  private String letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  private String LETRAS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
 
 
   public LetterListModel(String data) {
@@ -23,7 +24,7 @@ public class LetterListModel implements LetterListContract.Model {
 
   @Override
   public String getLetras(){
-    return letras;
+    return LETRAS;
   }
 
   @Override
