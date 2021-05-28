@@ -1,9 +1,9 @@
 package es.ulpgc.eite.cleancode.lettersandnumbers.letters;
 
 import java.lang.ref.WeakReference;
+import java.util.ArrayList;
 
-import es.ulpgc.eite.cleancode.lettersandnumbers.app.LettersToNumbersState;
-import es.ulpgc.eite.cleancode.lettersandnumbers.app.NumbersToLettersState;
+import es.ulpgc.eite.cleancode.lettersandnumbers.data.BaseData;
 import es.ulpgc.eite.cleancode.lettersandnumbers.data.LetterData;
 
 public interface LetterListContract {
@@ -36,6 +36,9 @@ public interface LetterListContract {
     void onDataFromNextScreen(String data);
     void onRestartScreen(String data);
     void onDataFromPreviousScreen(String data);
+    void addLetter(String letra);
+    String getLetras();
+    ArrayList<String> getListaLetras();
   }
 
 

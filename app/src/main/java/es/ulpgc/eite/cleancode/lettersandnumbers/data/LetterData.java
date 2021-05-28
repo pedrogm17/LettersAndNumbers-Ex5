@@ -2,6 +2,8 @@ package es.ulpgc.eite.cleancode.lettersandnumbers.data;
 
 import java.math.BigInteger;
 import java.nio.ByteBuffer;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -10,12 +12,12 @@ public class LetterData implements BaseData {
 
   public Long id;
   public String letter;
-  //public List<NumberData> numbers;
+  public List<NumberData> numbers;
 
   public LetterData() {
     id = generateUniqueId();
     letter = "";
-    //numbers= new ArrayList<>();
+    numbers = new ArrayList<>();
   }
 
   @Override

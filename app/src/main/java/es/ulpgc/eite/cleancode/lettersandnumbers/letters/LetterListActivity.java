@@ -3,6 +3,7 @@ package es.ulpgc.eite.cleancode.lettersandnumbers.letters;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,12 +18,22 @@ public class LetterListActivity
   public static String TAG = LetterListActivity.class.getSimpleName();
 
   private LetterListContract.Presenter presenter;
+  Button letraBtn;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_letter_list);
     getSupportActionBar().setTitle(R.string.letters_title);
+
+    letraBtn = findViewById(R.id.letterListButton);
+    letraBtn.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        presenter.onClickLetterListButton();
+      }
+    });
+
 
     // don't touch, necessary for testing
     if (savedInstanceState == null) {
@@ -69,10 +80,6 @@ public class LetterListActivity
     presenter.onDestroy();
   }
 
-
-  public void onClickLetterListButton(View view) {
-    presenter.onClickLetterListButton();
-  }
 
   @Override
   public void onDataUpdated(LetterListViewModel vm) {

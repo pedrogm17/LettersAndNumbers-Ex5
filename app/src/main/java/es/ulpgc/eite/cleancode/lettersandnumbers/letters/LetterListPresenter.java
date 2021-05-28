@@ -1,6 +1,7 @@
 package es.ulpgc.eite.cleancode.lettersandnumbers.letters;
 
 import java.lang.ref.WeakReference;
+import java.util.ArrayList;
 
 import es.ulpgc.eite.cleancode.lettersandnumbers.app.AppMediator;
 import es.ulpgc.eite.cleancode.lettersandnumbers.app.LettersToNumbersState;
@@ -113,6 +114,11 @@ public class LetterListPresenter implements LetterListContract.Presenter {
   @Override
   public void onClickLetterListButton() {
     // Log.e(TAG, "onClickLetterListButton()");
+    ArrayList<String> data = model.getListaLetras();
+    int cuenta = data.size();
+    String letras = model.getLetras();
+    char letra = letras.charAt(cuenta);
+    model.addLetter(String.valueOf(letra));
   }
 
   @Override
